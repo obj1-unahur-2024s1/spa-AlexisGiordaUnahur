@@ -1,3 +1,5 @@
+import spa.*
+
 object olivia{
 	var gradoDeConcentracion = 6
 	
@@ -71,14 +73,14 @@ object bruno{
 }
 
 object ramiro{
-	var nivelDeContractura = 0.max(0) //no sirve el max
+	var nivelDeContractura = 0 //no sirve el max
 	var tienePielGrasosa = true
 	
 	method nivelDeContractura() = nivelDeContractura
 	method tienePielGrasosa() = tienePielGrasosa
 	
 	method recibirMasajes(){
-		nivelDeContractura -= 2
+		nivelDeContractura = (nivelDeContractura - 2).max(0)
 	}
 	
 	method tomarBanoDeVapor(){
